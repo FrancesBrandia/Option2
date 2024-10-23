@@ -1,0 +1,82 @@
+/* Header with tabs */
+.header-tabs {
+    /* For fixed headers, do position: fixed */
+    /* and give your content's container margin-top: 56px */
+    /* position: fixed; */
+    width: 100%;
+    height: 56px;
+    background-color: #003C78;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.header-tabs ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3px;
+    list-style-type: none;
+}
+
+.header-tabs a {
+    color: #B4C5D6;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 8px 8px 0 0;
+    font-size: 16px;
+    display: block;
+    transition: 0.1s;
+}
+
+.header-tabs a:hover,
+.header-tabs a.active {
+    background-color: #F2F6FA;
+    color: #0A3C78;
+    cursor: pointer;
+}
+
+/* Header with material tabs */
+.header-material {
+    /* For fixed headers, do position: fixed */
+    /* and give your content's container margin-top: 56px */
+    /* position: fixed; */
+    width: 100%;
+    height: 56px;
+    background-color: #003C78;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.header-material ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.header-material a {
+    color: #B4C5D6;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    box-sizing: border-box;
+    transition: 0.1s;
+}
+
+.header-material a:hover,
+.header-material a.active {
+    color: #fff;
+    cursor: pointer;
+}
+
+.header-material a:hover .material-underline,
+.header-material a.active .material-underline {
+    width: calc(100% + 8px);
+    height: 4px;
+    background-color: #B4C5D6;
+    border-radius: 4px 4px 0 0;
+}

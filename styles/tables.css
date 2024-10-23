@@ -1,0 +1,419 @@
+/* Table header/row */
+.table {
+    width: min(100%, 1440px);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.table-header,
+.table-row {
+    display: grid;
+    /* change num and width of columns here (use minmax(0, {new width here}) */
+    /* using minmax(0, {width}) ensures every column has the same width in the table */
+    grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 1fr) minmax(0, 3fr) minmax(0, 4fr);
+    min-height: 44px;
+}
+
+.table-header {
+    background-color: #C6D4E2;
+}
+
+.table-row {
+    background-color: #fff;
+    border-bottom: 1px solid #C6D4E2;
+}
+
+.table-row:hover {
+   outline: 1px solid #0067FF;
+   outline-offset: -1px;
+}
+
+:nth-child(even of .table .table-row) {
+    background-color: #FFFCF1;
+}
+
+.table-header > *,
+.table-row > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4px 12px;
+    font-size: 14px;
+}
+
+.table-header > * {
+    font-weight: 600;
+}
+
+.table-header > *:not(:last-child) {
+    border-right: 1px solid #fff;
+}
+
+.table-row > *:not(:last-child) {
+    border-right: 1px solid #C6D4E2;
+}
+
+
+/* Accordion table */
+/* main table content */
+.table-accordion {
+    width: min(100%, 1440px);
+    display: flex;
+    flex-direction: column;
+}
+
+.table-accordion > .row {
+    display: grid;
+    /* change num and width of columns here (use minmax(0, {new width here}) */
+    /* using minmax(0, {width}) ensures every column has the same width in the table */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 4fr) minmax(0, 4fr) minmax(0, 4fr) minmax(0, 4fr) minmax(0, 2fr) minmax(0, 2fr);
+    align-items: center;
+    justify-items: start;
+    background-color: #fff;
+    border-bottom: 1px solid #CFD8E0;;
+}
+
+:nth-child(even of .table-accordion > .row) {
+    background-color: #FFFCF1;
+}
+
+.table-accordion > .row:hover {
+    cursor: pointer;
+    outline: 1px solid #0067FF;
+    outline-offset: -1px;
+}
+
+.table-accordion > .row > * {
+    font-size: 14px;
+}
+
+.table-accordion > .row .large-font-size {
+    font-size: 16px;
+}
+
+.table-accordion > .row > *:not(.expand-row-icon, .status-icon, .action-icon) {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 16px 8px;
+}
+
+.table-accordion > .row.expanded > *:not(.expand-row-icon, .status-icon, .action-icon) {
+    max-width: 100%;
+    white-space: wrap;
+    overflow: unset;
+    text-overflow: none;
+    word-wrap: break-word;
+}
+
+.table-accordion .expand-row-icon {
+    color: #666666;
+    font-size: 18px !important;
+    padding: 0 8px;
+    transition: 0.2s;
+}
+
+.status-icon {
+    font-size: 24px !important;
+    padding: 0 8px;
+}
+
+.status-icon.success {
+    color: #1AAC52;
+}
+
+.status-icon.error {
+    color: #FF0000;
+}
+
+.action-icon {
+    color: #C6D4E2;
+    font-size: 18px !important;
+    padding: 0 8px;
+}
+
+.action-icon:hover {
+    color: #0067FF;
+}
+
+/* accordion content */
+.table-accordion .accordion-content {
+    display: none;
+    flex-direction: column;
+}
+
+.table-accordion .accordion-content .accordion-header {
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    gap: 1px;
+    background-color: #0A3C78;
+}
+
+.table-accordion .accordion-content .accordion-header * {
+    color: #fff;
+    font-size: 14px;
+}
+
+.table-accordion .accordion-content .accordion-header > * {
+    padding: 8px;
+}
+
+.table-accordion .accordion-content .accordion-header *:not(:last-child) {
+    border-right: 1px solid #fff;
+}
+
+.table-accordion .accordion-content .accordion-header .bold {
+    font-weight: 600;
+}
+
+.table-accordion .accordion-content .accordion-header .error {
+    color: #FF0000;
+}
+
+.table-accordion .accordion-content .accordion-table {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    background-color: #F4F9FF;
+    border: 1px solid #CFD8E0;
+}
+
+.table-accordion .accordion-content .accordion-table > .accordion-table-header,
+.table-accordion .accordion-content .accordion-table > .accordion-row {
+    display: grid;
+    /* change num and width of columns here (use minmax(0, {new width here}) */
+    /* using minmax(0, {width}) ensures every column has the same width in the table */
+    grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 2fr) minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+    align-items: flex-start;
+    justify-items: start;
+    font-size: 14px;
+}
+
+.table-accordion .accordion-content .accordion-table > .accordion-table-header {
+    padding: 0 12px 8px 12px;
+    border-bottom: 1px solid #C6D4E2;
+}
+
+.table-accordion .accordion-content .accordion-table > .accordion-table-header > *,
+.table-accordion .accordion-content .accordion-table > .accordion-row > * {
+    padding: 0 4px;
+}
+
+.table-accordion .accordion-content .accordion-table > .accordion-table-header > * {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+}
+
+.table-accordion .accordion-content .accordion-table > .accordion-row {
+    padding: 16px 12px 0 12px;
+}
+
+.table-accordion .accordion-content .accordion-table > .accordion-table-header > *,
+.table-accordion .accordion-content .accordion-table > .accordion-row > *:not(.status-icon) {
+    max-width: 100%;
+    white-space: wrap;
+    overflow: unset;
+    text-overflow: none;
+    word-wrap: break-word;
+}
+
+.table-accordion .accordion-content .accordion-table > .accordion-table-header > .status,
+.table-accordion .accordion-content .accordion-table > .accordion-row > .status-icon {
+    justify-self: center;
+}
+
+/* Filter accordion */
+/* main content */
+.filter-accordion {
+    width: min(100%, 1440px);
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-accordion > .filter-row {
+    display: flex;
+    align-items: center;
+    justify-items: start;
+    gap: 24px;
+    padding: 18px 24px;
+    background-color: #fff;
+    border-bottom: 1px solid #CFD8E0;
+}
+
+.filter-accordion > .filter-row:hover {
+    outline: 1px solid #0067FF;
+    outline-offset: -1px;
+    cursor: pointer;
+}
+
+.filter-accordion .expand-row-icon {
+    color: #666666;
+    font-size: 18px !important;
+    padding: 0 8px;
+    transition: 0.2s;
+}
+
+/* accordion content */
+.filter-accordion .accordion-content {
+    display: none;
+    flex-direction: column;
+    padding: 28px;
+    background-color: #fff;
+    border-top: 1px solid #CFD8E0;
+    border-bottom: 1px solid #CFD8E0;
+}
+
+.filter-accordion .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.filter-accordion .action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: auto;
+}
+
+/* css for dropdowns pulled from elements-inputs-controls.css */
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 276px;
+    gap: 8px;
+}
+
+.dropdown-label {
+    font-size: 14px;
+    color: #666666;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 32px;
+    background-color: #fff;
+    border: 1.5px solid #C7D3DF;
+    border-radius: 4px;
+    padding: 0 12px;
+    font-size: 16px;
+    color: #666666;
+    position: relative;
+}
+
+.dropdown-trigger.expanded,
+.dropdown-trigger:hover {
+    border-color: #0067FF;
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    color: #666666;
+    transition: 0.3s;
+    background: transparent;
+}
+
+.dropdown-trigger.expanded .dropdown-arrow,
+.dropdown-trigger:hover .dropdown-arrow {
+    color: #0067FF;
+}
+
+.dropdown-options {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: 1.5px solid #0067FF;
+    background-color: #fff;
+    border-radius: 4px;
+    width: 100%;
+    top: calc(100% + 4px);
+    padding: 4px;
+    z-index: 100;
+    visibility: hidden;
+    list-style-type: none;
+}
+
+.dropdown-option {
+    font-size: 16px;
+    color: #444444;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.dropdown-option:hover {
+    background-color: #F1F7FF;
+    cursor: pointer;
+}
+/* ---------------- */
+
+/* css for text inputs pulled from elements-inputs-controls.css with adjusted width */
+.text-input {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.text-input label {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.text-input input {
+    width: 276px;
+    border: 1.5px solid #C7D3DF;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-input input:hover,
+.text-input input:focus {
+    border-color: #0067FF;
+    outline: none;
+}
+
+.text-input input::placeholder {
+    font-size: 14px;
+}
+/* ---------------- */
+
+/* buttons css pulled from action-buttons.css */
+.filter-accordion-button {
+    display: block;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.1s;
+}
+
+.primary {
+    background: #0067ff;
+    color: #ffffff;
+}
+
+.primary:hover {
+    background: #0d2d52;
+    cursor: pointer;
+}
+
+.secondary {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.secondary:hover {
+    background: #0067ff;
+    color: #ffffff;
+    border: 1px solid #0067ff;
+    cursor: pointer;
+}
+/* ------------------ */

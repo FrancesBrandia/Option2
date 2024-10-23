@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./prism/prism.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="color-codes.css">
+    <link rel="stylesheet" href="./app-components/app-header.css">
+    <link rel="stylesheet" href="./app-components/app-sidebar.css">
+    <title>Master Component Library</title>
+</head>
+<body>
+    <script defer src="./prism/prism.js"></script>
+    <script defer src="./app-components/app-header.js"></script>
+    <script defer src="./app-components/app-sidebar.js"></script>
+
+    <app-header></app-header>
+    <app-sidebar id="home"></app-sidebar>
+
+    <div class="page-content">
+        <div class="container home">
+            <div class="welcome">
+                <h1>Welcome to the ACR's Master Component Library!</h1>
+                <p>
+                    The purpose of this library is to provide ACR developers with a foundation for some of the most common components used in ACR web applications.
+                    This will help to maintain consistent styling across applications and significantly reduce the time needed to develop them.
+                </p>
+            </div>
+            <div class="how-to-use">
+                <h2>How to use the library</h2>
+                <p>
+                    Explore the various sections of components via the sidebar to the left.
+                    Underneath each component is the associated HTML (and JavaScript, if applicable) needed to reconstruct the component.
+                </p>
+                <!-- <p>
+                    Copy the HTML, JavaScript and CSS that you need from this library into your own application, where you can then edit the component to suit the needs of your app.
+                </p> -->
+                <p>
+                    If you find a component you need, copy its HTML, CSS and JavaScript and use it in your application.
+                    Edit the content and/or styling of the component to suit the needs of your app.
+                    The main structure, padding and alignment of the component will remain intact.
+                </p>
+            </div>
+            <div class="css-access">
+                <h2>How to access the CSS for the components</h2>
+                <p>
+                    Each page of components has a title at the top.
+                    Click on the title to be directed to the CSS file which contains the styling for all the components within that page.
+                </p>
+                <p>
+                    For example, the title on the <a href="./pages/action-buttons.html" class="pages-link">Action Buttons</a> page is a link to the CSS file that has the styling for all the action buttons displayed on the page.
+                </p>
+            </div>
+            <div class="global-styles">
+                <h2>Global styles</h2>
+                <div>
+                    <h3>CSS</h3>
+                    <p>All of the components in this library have some default styles applied to them.</p>
+                    <p>Make sure to copy the CSS below into your application to make sure the components behave properly:</p>
+                    <pre><code class="language-css">* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #444444;
+}
+
+/* prevents users from accidentally highlighting icons when clicking them */
+.material-icons {
+    user-select: none;
+}</code></pre>
+                </div>
+
+                <div>
+                    <h3>Font</h3>
+                    <p>The main font used in this library is Roboto from Google Fonts.</p>
+                    <p>Be sure to include the following code in the &lt;head&gt; of your HTML file:</p>
+                    <pre><code class="language-html">&lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt; 
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"&gt;</code></pre>
+                    <p>You can apply the font by using the CSS below:</p>
+                    <pre><code class="language-css">body {
+    font-family: "Roboto", sans-serif;
+}</code></pre>
+                </div>
+                <div>
+                    <h3>Icons</h3>
+                    <p>The icons used in this library come from Google's Material Icons library.</p>
+                    <p>In order for these icons to work, you must include the following code in the head of your HTML file:</p>
+                    <pre><code class="language-html">&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;</code></pre>
+                    <p>
+                        <a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank" class="google-icons-link">Click here</a>
+                        to view all of the Material Icons and to see more detailed instructions on how to use them.
+                    </p>
+                </div>
+                <div>
+                    <h3>Image files</h3>
+                    <p>
+                        The files for the logos and images used within this library can be found 
+                        <a href="https://github.com/ACRCode/ACR-master-component-library/tree/main/assets/icons" target="_blank" class="pages-link">here</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="disclaimers">
+                <h2>Disclaimers</h2>
+                <div>
+                    <h3>Responsiveness</h3>
+                    <p>These components are designed primarily for tablet and desktop applications.</p>
+                </div>
+                <div>
+                    <h3>Repetitive code</h3>
+                    <p>Some components utilize the same CSS/JavaScript from other comonents.</p>
+                    <p>
+                        For example, there is a dropdown single select component in <a href="./pages/elements-inputs-controls.html" class="pages-link">Elements, Inputs and Controls</a>.
+                        This same dropdown is used within several other components, meaning the same CSS and JavaScript for the dropdown is also included in those other components.
+                    </p>
+                </div>
+                <div>
+                    <h3>CSS classes</h3>
+                    <p>
+                        Some of the CSS classes may override with other components from this library or from your application.
+                        Keep this in mind when using these components and if you encounter any unexpected behavior.
+                    </p>
+                    <p>If you change the class names in a component, make sure to update the CSS file and the JavaScript (if applicable) for the component accordingly.</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Info</h2>
+                <div>
+                    <h3>Brett Swick - Principal IT Project Manager</h3>
+                    <a href="mailto: bswick@acr.org">bswick@acr.org</a>
+                </div>
+                <div>
+                    <h3>Nelly Rubin - Senior UI/UX Designer</h3>
+                    <a href="mailto: nrubin@acr.org">nrubin@acr.org</a>
+                </div>
+                <div>
+                    <h3>Toby Rosser - UI/UX Designer</h3>
+                    <a href="mailto: trosser@acr.org">trosser@acr.org</a>
+                </div>
+                <div>
+                    <h3>Jill Lidsky - Front-End Developer</h3>
+                    <a href="mailto: jlidsky@acr.org">jlidsky@acr.org</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

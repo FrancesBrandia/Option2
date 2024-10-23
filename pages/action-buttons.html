@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../app-components/app-header.css">
+    <link rel="stylesheet" href="../app-components/app-sidebar.css">
+    <link rel="stylesheet" href="../app-components/code-block.css">
+    <link rel="stylesheet" href="../styles/action-buttons.css">
+    <title>Action Buttons</title>
+</head>
+<body>
+    <script defer src="../prism/prism.js"></script>
+    <script defer src="../app-components/app-header.js"></script>
+    <script defer src="../app-components/app-sidebar.js"></script>
+    <script defer src="../app-components/code-block.js"></script>
+    <script defer src="../components-code-display/action-buttons/action-button-primary-code.js"></script>
+    <script defer src="../components-code-display/action-buttons/action-button-secondary-code.js"></script>
+    <script defer src="../components-code-display/action-buttons/action-button-text-code.js"></script>
+    <script defer src="../components-code-display/action-buttons/action-button-alert-code.js"></script>
+    <script defer src="../components-code-display/action-buttons/action-button-disabled-code.js"></script>
+
+    <app-header></app-header>
+    <app-sidebar id="action-buttons"></app-sidebar>
+
+    <div class="page-content">
+        <div class="container">
+            <a
+                class="css-link"
+                href="https://github.com/ACRCode/ACR-master-component-library/blob/main/src/styles/action-buttons.css"
+                target="_blank"
+            >
+                <h1>Action Buttons</h1>
+                <div class="material-icons open-link-icon">
+                    open_in_new
+                </div>
+            </a>
+
+            <div class="component">
+                <h2>Primary</h2>
+
+                <div class="button-section">
+                    <button class="button primary">Action</button>
+                    <button class="button primary round">Action</button>
+                </div>
+
+                <action-button-primary-code></action-button-primary-code>
+            </div>
+
+            <div class="component">
+                <h2>Secondary</h2>
+
+                <div class="button-section">
+                    <button class="button secondary">Action</button>
+                    <button class="button secondary round">Action</button>
+                </div>
+
+                <action-button-secondary-code></action-button-secondary-code>
+            </div>
+
+            <div class="component">
+                <h2>Text</h2>
+
+                <div class="button-section">
+                    <button class="button text">Action</button>
+                    <button class="button text round">Action</button>
+                </div>
+
+                <action-button-text-code></action-button-text-code>
+            </div>
+
+            <div class="component">
+                <h2>Alert</h2>
+
+                <div class="button-section">
+                    <button class="button alert">Action</button>
+                    <button class="button alert round">Action</button>
+                </div>
+
+                <action-button-alert-code></action-button-alert-code>
+            </div>
+
+            <div class="component">
+                <h2>Disabled</h2>
+
+                <div class="button-section">
+                    <button class="button disabled">Action</button>
+                    <button class="button disabled round">Action</button>
+                </div>
+                
+                <action-button-disabled-code></action-button-disabled-code>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

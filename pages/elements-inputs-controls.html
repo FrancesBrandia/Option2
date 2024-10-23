@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../app-components/app-header.css">
+    <link rel="stylesheet" href="../app-components/app-sidebar.css">
+    <link rel="stylesheet" href="../app-components/code-block.css">
+    <link rel="stylesheet" href="../styles/elements-inputs-controls.css">
+    <title>Elements, Inputs and Controls</title>
+</head>
+
+<body>
+    <script defer src="../prism/prism.js"></script>
+    <script defer src="../app-components/app-header.js"></script>
+    <script defer src="../app-components/app-sidebar.js"></script>
+    <script defer src="../app-components/code-block.js"></script>
+    <script defer src="../components-code-display/elements-inputs-controls/menu-item-code.js"></script>
+    <script defer src="../components-code-display/elements-inputs-controls/dropdown-code.js"></script>
+    <script defer src="../components-code-display/elements-inputs-controls/text-input-code.js"></script>
+    <script defer src="../components-code-display/elements-inputs-controls/date-picker-code.js"></script>
+    <script defer src="../components-code-display/elements-inputs-controls/radio-button-code.js"></script>
+    <script defer src="../components-code-display/elements-inputs-controls/checkbox-code.js"></script>
+    <script defer src="../components-code-display/elements-inputs-controls/text-area-code.js"></script>
+    <script defer src="../components-code-display/elements-inputs-controls/bread-crumb-code.js"></script>
+    <script defer src="../components-code-display/elements-inputs-controls/tooltip-code.js"></script>
+
+    <app-header></app-header>
+    <app-sidebar id="elements-inputs-controls"></app-sidebar>
+
+    <div class="page-content">
+        <div class="container">
+            <a class="css-link"
+                href="https://github.com/ACRCode/ACR-master-component-library/blob/main/src/styles/elements-inputs-controls.css"
+                target="_blank">
+                <h1>Elements, Inputs and Controls</h1>
+                <div class="material-icons open-link-icon">
+                    open_in_new
+                </div>
+            </a>
+
+            <div class="component">
+                <h2>List item/menu label with icon</h2>
+
+                <ul class="menu-items">
+                    <li><a href="#">
+                            <div class="material-icons menu-icon">
+                                edit
+                            </div>
+                            Menu Item
+                        </a></li>
+                </ul>
+
+                <menu-item-code></menu-item-code>
+            </div>
+
+            <div class="component">
+                <h2>Drop down single select</h2>
+
+                <div id="unique-dropdown-id" class="dropdown">
+                    <div class="dropdown-label">
+                        Label
+                    </div>
+                    <div class="dropdown-trigger" onclick="toggleSelectDropdown.call(this)">
+                        <div class="dropdown-selection">-Select-</div>
+                        <div class="material-icons dropdown-arrow">
+                            expand_more
+                        </div>
+                        <ul class="dropdown-options">
+                            <li class="dropdown-option" data-value="Selection Item 1">Selection Item 1</li>
+                            <li class="dropdown-option" data-value="Selection Item 2">Selection Item 2</li>
+                            <li class="dropdown-option" data-value="Selection Item 3">Selection Item 3</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <dropdown-code></dropdown-code>
+            </div>
+
+            <div class="component">
+                <h2>Text input</h2>
+
+                <div class="text-input">
+                    <label for="unique-id">Label</label>
+                    <input type="text" id="unique-id" name="text_input" value="Text...">
+                </div>
+
+                <text-input-code></text-input-code>
+            </div>
+
+            <div class="component">
+                <h2>Date picker</h2>
+
+                <div class="datepicker">
+                    <label for="unique-datepicker-id">Date</label>
+                    <input type="date" id="unique-datepicker-id">
+                </div>
+
+                <date-picker-code></date-picker-code>
+            </div>
+
+            <div class="component">
+                <h2>Radio button</h2>
+
+                <form>
+                    <div class="radio-button">
+                        <input type="radio" id="radio-1" name="radio_name" value="Radio Button Label">
+                        <label for="radio-1" class="radio-label">Radio Button Label</label>
+                    </div>
+                    
+                    <div class="radio-button">
+                        <input type="radio" id="radio-2" name="radio_name" value="Radio Button Label">
+                        <label for="radio-2" class="radio-label">Radio Button Label</label>
+                    </div>
+
+                    <button type="button" class="radio-reset-button secondary" onclick="resetRadioSelection.call(this)">
+                        Clear
+                    </button>
+                </form>
+
+                <radio-button-code></radio-button-code>
+            </div>
+
+            <div class="component">
+                <h2>Check box</h2>
+
+                <div class="checkbox">
+                    <label for="checkbox-1">
+                        <input type="checkbox" id="checkbox-1" name="checkbox_name" value="Check Box Label">
+                        <span class="material-icons checkbox-icon">check</span>
+                        Check Box Label
+                    </label>
+                </div>
+
+                <div class="checkbox">
+                    <label for="checkbox-2">
+                        <input type="checkbox" id="checkbox-2" name="checkbox_name" value="Check Box Label">
+                        <span class="material-icons checkbox-icon">check</span>
+                        Check Box Label
+                    </label>
+                </div>
+
+                <checkbox-code></checkbox-code>
+            </div>
+
+            <div class="component">
+                <h2>Text input area</h2>
+
+                <div class="textarea">
+                    <label for="unique-text-area-id">Label</label>
+                    <textarea id="unique-text-area-id" name="text_area_name" placeholder="-Describe-"></textarea>
+                </div>
+
+                <text-area-code></text-area-code>
+            </div>
+
+            <div class="component">
+                <h2>Text bread crumb</h2>
+
+                <ul class="bread-crumb">
+                    <li><a href="#">Nav Root</a></li>
+                    <li>
+                        <div class="material-icons right-arrow">chevron_right</div>
+                    </li>
+                    <li><a href="#">Previous Page</a></li>
+                    <li>
+                        <div class="material-icons right-arrow">chevron_right</div>
+                    </li>
+                    <li>Present Page</li>
+                </ul>
+
+                <bread-crumb-code></bread-crumb-code>
+            </div>
+            <div class="component">
+                <h2>Tool tips</h2>
+
+                <div class="tooltip-section">
+                    <span class="tooltip top"
+                        data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.">
+                        i
+                    </span>
+                    <span class="tooltip bottom"
+                        data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.">
+                        i
+                    </span>
+                    <span class="tooltip left"
+                        data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.">
+                        i
+                    </span>
+                    <span class="tooltip right"
+                        data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.">
+                        i
+                    </span>
+                </div>
+
+                <tooltip-code></tooltip-code>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // close dropdowns when clicking outside of them
+        window.addEventListener('click', (e) => {
+            if (!e.target.matches('.dropdown-trigger, .dropdown-trigger  *')) {
+                const activeDropdown = document.querySelector('.dropdown-trigger.expanded');
+                if (activeDropdown) {
+                    toggleSelectDropdown.call(activeDropdown);
+                }
+            }
+        });
+
+        // this === the clicked dropdown-trigger div
+        const toggleSelectDropdown = function () {
+            // close the currently opened dropdown
+            const activeDropdown = document.querySelector('.dropdown-trigger.expanded');
+            if (activeDropdown && activeDropdown !== this) {
+                toggleSelectDropdown.call(activeDropdown);
+            }
+
+            // apply the proper css styles to the dropdown
+            const dropdownArrow = this.querySelector('.dropdown-arrow');
+            const dropdownSelection = this.querySelector('.dropdown-selection');
+            const dropdownContent = this.querySelector('.dropdown-options');
+            if (this.classList.contains('expanded')) {
+                this.classList.remove('expanded');
+                dropdownArrow.style.transform = 'rotate(0deg)';
+                dropdownContent.style.visibility = 'hidden';
+            } else {
+                this.classList.add('expanded');
+                dropdownArrow.style.transform = 'rotate(180deg)';
+                dropdownContent.style.visibility = 'visible';
+            }
+
+            // update the selected option if an option is chosen
+            const dropdownOptions = this.querySelectorAll('.dropdown-option');
+            dropdownOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    dropdownSelection.innerHTML = option.innerHTML;
+                });
+            });
+        }
+
+        // Radio button reset button function
+        // this code is only needed if you want a "clear" option
+        const resetRadioSelection = function () {
+            const form = this.parentElement;
+            const selectedRadio = form.querySelector('.radio-button input:checked');
+            if (selectedRadio) {
+                selectedRadio.checked = false;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../app-components/app-header.css">
+    <link rel="stylesheet" href="../app-components/app-sidebar.css">
+    <link rel="stylesheet" href="../app-components/code-block.css">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <title>Colors</title>
+</head>
+
+<body>
+    <script defer src="../prism/prism.js"></script>
+    <script defer src="../app-components/app-header.js"></script>
+    <script defer src="../app-components/app-sidebar.js"></script>
+    <script defer src="../app-components/code-block.js"></script>
+
+    <app-header></app-header>
+    <app-sidebar id="colors"></app-sidebar>
+    <div class="page-content">
+        <div class="subhead-lvl_one">
+            <h1>Colors</h1>
+            <div class="page-nav">
+                <a href="#" class="filter-btn active"><object class="svg svg_default"
+                        data="/assets/icons/code_blocks.svg"></object>Code
+                    <div class="bottom-border"></div>
+                </a>
+                <a href="#" target="_blank" class="filter-btn"><object class="svg svg_default"
+                        data="/assets/icons/deployed_code.svg"></object>Examples
+                    <div class="bottom-border"></div>
+                </a>
+                <a href="#" target="_blank" class="filter-btn"><object class="svg svg_default"
+                        data="/assets/icons/developer_guide.svg"></object>Guidelines<div class="bottom-border">
+                    </div></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="width-100">
+                <div class="block">
+                    <div class="block-card active" id="code-block">
+                        <button class="block-btn" id="show-samples">View Color Samples</button>
+                        <div id="color-css">
+                            <div>:root {</div>
+                            <section>--gray-100: <span class="hex">#F3F3F3;</span><br>
+                                --gray-200: <span class="hex">#E7E7E7;</span><br>
+                                --gray-300: <span class="hex">#DBDBDB;</span><br>
+                                --gray-400: <span class="hex">#CFCFCF;</span><br>
+                                --gray-500: <span class="hex">#B7B7B7;</span><br>
+                                --gray-600: <span class="hex">#9F9F9F;</span><br>
+                                --gray-700: <span class="hex">#878787;</span><br>
+                                --gray-800: <span class="hex">#6C6C6C;</span><br>
+                                --gray-900: <span class="hex">#515151;</span><br>
+                                --gray-1000: <span class="hex">#363636;</span><br>
+                                --gray-1100: <span class="hex">#292929;</span><br>
+                                --gray-1200: <span class="hex">#1B1B1B;</span><br>
+                                --gray-1300: <span class="hex">#0E0E0E;</span><br>
+                                --gray-1400: <span class="hex">#000000;</span></section>
+
+                            <section>--green-100: <span class="hex">#E5FFE5;</span><br>
+                                --green-200: <span class="hex">#CCFFCC;</span><br>
+                                --green-300: <span class="hex">#B2FFB2;</span><br>
+                                --green-400: <span class="hex">#99FF99;</span><br>
+                                --green-500: <span class="hex">#66FF66;</span><br>
+                                --green-600: <span class="hex">#33FF33;</span><br>
+                                --green-700: <span class="hex">#00FF00;</span><br>
+                                --green-800: <span class="hex">#00CC00;</span><br>
+                                --green-900: <span class="hex">#009900;</span><br>
+                                --green-1000: <span class="hex">#006600;</span><br>
+                                --green-1100: <span class="hex">#004D00;</span><br>
+                                --green-1200: <span class="hex">#003300;</span><br>
+                                --green-1300: <span class="hex">#001A00;</span><br>
+                                --green-1400: <span class="hex">#000000;</span></section>
+
+                            <section>--indigo-100: <span class="hex">#F8F8FA;</span><br>
+                                --indigo-200: <span class="hex">#F1F1F5;</span><br>
+                                --indigo-300: <span class="hex">#EBEAEF;</span><br>
+                                --indigo-400: <span class="hex">#E4E3EA;</span><br>
+                                --indigo-500: <span class="hex">#D6D5E0;</span><br>
+                                --indigo-600: <span class="hex">#C9C7D5;</span><br>
+                                --indigo-700: <span class="hex">#BBB9C8;</span><br>
+                                --indigo-800: <span class="hex">#A4A1B6;</span><br>
+                                --indigo-900: <span class="hex">#767292;</span><br>
+                                --indigo-1000: <span class="hex">#49436D;</span><br>
+                                --indigo-1100: <span class="hex">#1B1449;</span><br>
+                                --indigo-1200: <span class="hex">#16103A;</span><br>
+                                --indigo-1300: <span class="hex">#100C2C;</span><br>
+                                --indigo-1400: <span class="hex">#0B081D;</span></section>
+
+                            <section>--blue-100: <span class="hex">#F4F8FF;</span><br>
+                                --blue-200: <span class="hex">#EAF1FF;</span><br>
+                                --blue-300: <span class="hex">#DFE9FF;</span><br>
+                                --blue-400: <span class="hex">#D5E2FF;</span><br>
+                                --blue-500: <span class="hex">#CADBFF;</span><br>
+                                --blue-600: <span class="hex">#AFC8FE;</span><br>
+                                --blue-700: <span class="hex">#95B6FE;</span><br>
+                                --blue-800: <span class="hex">#7AA4FE;</span><br>
+                                --blue-900: <span class="hex">#4E86FD;</span><br>
+                                --blue-1000: <span class="hex">#2268FD;</span><br>
+                                --blue-1100: <span class="hex">#1B53CA;</span><br>
+                                --blue-1200: <span class="hex">#143E98;</span><br>
+                                --blue-1300: <span class="hex">#0E2A65;</span><br>
+                                --blue-1400: <span class="hex">#071533;</span></section>
+
+                            <section>--purple-100: <span class="hex">#F2EEFE;</span><br>
+                                --purple-200: <span class="hex">#E6DDFC;</span><br>
+                                --purple-300: <span class="hex">#D9CCFB;</span><br>
+                                --purple-400: <span class="hex">#CCBBF9;</span><br>
+                                --purple-500: <span class="hex">#B399F6;</span><br>
+                                --purple-600: <span class="hex">#9977F3;</span><br>
+                                --purple-700: <span class="hex">#8055F0;</span><br>
+                                --purple-800: <span class="hex">#6844C5;</span><br>
+                                --purple-900: <span class="hex">#50349B;</span><br>
+                                --purple-1000: <span class="hex">#392370;</span><br>
+                                --purple-1100: <span class="hex">#2D1B5B;</span><br>
+                                --purple-1200: <span class="hex">#211346;</span><br>
+                                --purple-1300: <span class="hex">#150A30;</span></section>
+
+                            <section>--white-100: <span class="hex">#FFFFFF;</span><br></section>
+
+                            <section>--teal-100: <span class="hex">#F1F9F7;</span><br>
+                                --teal-200: <span class="hex">#E2F2EF;</span><br>
+                                --teal-300: <span class="hex">#D4ECE8;</span><br>
+                                --teal-400: <span class="hex">#C6E5E0;</span><br>
+                                --teal-500: <span class="hex">#A9D9D0;</span><br>
+                                --teal-600: <span class="hex">#8DCCC1;</span><br>
+                                --teal-700: <span class="hex">#70BFB1;</span><br>
+                                --teal-800: <span class="hex">#5A9A8E;</span><br>
+                                --teal-900: <span class="hex">#44756C;</span><br>
+                                --teal-1000: <span class="hex">#2E4F49;</span><br>
+                                --teal-1100: <span class="hex">#233D38;</span><br>
+                                --teal-1200: <span class="hex">#182A27;</span><br>
+                                --teal-1300: <span class="hex">#0D1815;</span><br>
+                                --teal-1400: <span class="hex">#020504;</span></section>
+
+                            <section>--orange-100: <span class="hex">#FEF7E6;</span><br>
+                                --orange-200: <span class="hex">#FDEFCD;</span><br>
+                                --orange-300: <span class="hex">#FDE6B4;</span><br>
+                                --orange-400: <span class="hex">#FCDE9B;</span><br>
+                                --orange-500: <span class="hex">#FACE69;</span><br>
+                                --orange-600: <span class="hex">#F9BD37;</span><br>
+                                --orange-700: <span class="hex">#F7AD05;</span><br>
+                                --orange-800: <span class="hex">#C68A04;</span><br>
+                                --orange-900: <span class="hex">#946803;</span><br>
+                                --orange-1000: <span class="hex">#634502;</span><br>
+                                --orange-1100: <span class="hex">#4A3402;</span><br>
+                                --orange-1200: <span class="hex">#312301;</span><br>
+                                --orange-1300: <span class="hex">#191101;</span><br>
+                                --orange-1400: <span class="hex">#000000;</span></section>
+
+                            <section>--brown-100: <span class="hex">#F8F1EB;</span><br>
+                                --brown-200: <span class="hex">#F1E4D7;</span><br>
+                                --brown-300: <span class="hex">#E9D6C2;</span><br>
+                                --brown-400: <span class="hex">#E2C9AE;</span><br>
+                                --brown-500: <span class="hex">#D4AD86;</span><br>
+                                --brown-600: <span class="hex">#C5925D;</span><br>
+                                --brown-700: <span class="hex">#B77735;</span><br>
+                                --brown-800: <span class="hex">#925F2A;</span><br>
+                                --brown-900: <span class="hex">#6E4720;</span><br>
+                                --brown-1000: <span class="hex">#493015;</span><br>
+                                --brown-1100: <span class="hex">#372410;</span><br>
+                                --brown-1200: <span class="hex">#25180B;</span><br>
+                                --brown-1300: <span class="hex">#120C05;</span><br>
+                                --brown-1400: <span class="hex">#000000;</span></section>
+
+                            <section>--pink-100: <span class="hex">#FBEBF4;</span><br>
+                                --pink-200: <span class="hex">#F6D7EA;</span><br>
+                                --pink-300: <span class="hex">#F2C3DF;</span><br>
+                                --pink-400: <span class="hex">#EDAFD4;</span><br>
+                                --pink-500: <span class="hex">#E587BF;</span><br>
+                                --pink-600: <span class="hex">#DC5FA9;</span><br>
+                                --pink-700: <span class="hex">#D33794;</span><br>
+                                --pink-800: <span class="hex">#A92C76;</span><br>
+                                --pink-900: <span class="hex">#7F2159;</span><br>
+                                --pink-1000: <span class="hex">#54163B;</span><br>
+                                --pink-1100: <span class="hex">#3F112C;</span><br>
+                                --pink-1200: <span class="hex">#2A0B1E;</span><br>
+                                --pink-1300: <span class="hex">#15060F;</span><br>
+                                --pink-1400: <span class="hex">#000000;</span></section>
+
+                            <section>--red-100: <span class="hex">#FFEBEE;</span><br>
+                                --red-200: <span class="hex">#FFCDD2;</span><br>
+                                --red-300: <span class="hex">#EF9A9A;</span><br>
+                                --red-400: <span class="hex">#E57373;</span><br>
+                                --red-500: <span class="hex">#EF5350;</span><br>
+                                --red-600: <span class="hex">#F44336;</span><br>
+                                --red-700: <span class="hex">#E53935;</span><br>
+                                --red-800: <span class="hex">#D32F2F;</span><br>
+                                --red-900: <span class="hex">#C62828;</span><br>
+                                --red-1000: <span class="hex">#B71C1C;</span><br>
+                            </section>
+                            <div>}</div>
+                        </div>
+                    </div>
+                    <div class="block-card" id="sample-block">
+                        <button class="block-btn" id="show-code">View Global CSS Code</button>
+                        <div id="color-samples">
+                            <section class="flex-column">
+                                <div class="color-header">Gray</div>
+                                <div class="sample"></div>
+                                <div class="font-light"></div>
+                                <div class="font-light"></div>
+
+                            </section>
+                            <section class="flex-column">
+                                <div class="color-header">Green</div>
+                                <div class="sample"></div>
+                                <div class="font-light"></div>
+                                <div class="font-light"></div>
+
+                            </section>
+                            <section class="flex-column">
+                                <div class="color-header">Indigo</div>
+                                <div class="sample"></div>
+                                <div class="font-light"></div>
+                                <div class="font-light"></div>
+
+                            </section>
+                            <section class="flex-column">
+                                <div class="color-header">Blue</div>
+                                <div class="sample"></div>
+                                <div class="font-light"></div>
+                                <div class="font-light"></div>
+
+                            </section>
+                            <section class="flex-column">
+                                <div class="color-header">Purple</div>
+                                <div class="sample"></div>
+                                <div class="font-light"></div>
+                                <div class="font-light"></div>
+
+                            </section>
+                            <section class="flex-column">
+                                <div class="color-header">Teal</div>
+                                <div class="sample"></div>
+                                <div class="font-light"></div>
+                                <div class="font-light"></div>
+
+                            </section>
+                            <section class="flex-column">
+                                <div class="color-header">Orange</div>
+                                <div class="sample"></div>
+                                <div class="font-light"></div>
+                                <div class="font-light"></div>
+
+                            </section>
+                            <section class="flex-column">
+                                <div class="color-header">Brown</div>
+                                <div class="sample"></div>
+                                <div class="font-light"></div>
+                                <div class="font-light"></div>
+
+                            </section>
+                            <section class="flex-column">
+                                <div class="color-header">Pink</div>
+                                <div class="sample"></div>
+                                <div class="font-light"></div>
+                                <div class="font-light"></div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../script.js"></script>
+</body>
+
+</html>

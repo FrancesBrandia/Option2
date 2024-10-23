@@ -1,0 +1,93 @@
+/* Sidebar */
+.sidebar {
+    width: 40px;
+    height: 100vh;
+    background-color: #003C78;
+    position: fixed;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.sidebar-toggle {
+    position: absolute;
+    top: 16px;
+    right: 11px;
+    font-size: 18px !important;
+    color: #B4C5D6;
+    z-index: 1;
+    background: transparent;
+    transition: 0.05s;
+}
+
+.sidebar-toggle.open:hover {
+    color: #666666;
+    cursor: pointer;
+}
+
+.sidebar-toggle.close {
+    display: none;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.sidebar-toggle.close:hover {
+    background-color: #fff;
+    color: #003C78;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    padding: 44px 16px 0 16px;
+    visibility: hidden;
+    position: relative;
+    width: 274px;
+    left: -274px;
+    transition: 0.5s;
+}
+
+.sidebar-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    list-style-type: none;
+    margin-bottom: 16px;
+}
+
+.sidebar-menu a {
+    color: #B4C5D6;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    width: 100%;
+    border-radius: 4px;
+    height: 32px;
+    transition: 0.05s;
+}
+
+.sidebar-menu .sidebar-icon {
+    color: #B4C5D6;
+    transition: 0.05s;
+}
+
+.sidebar-menu a:hover {
+    background-color: #B4C5D6;
+    color: #003C78;
+}
+
+.sidebar-menu a:hover .sidebar-icon {
+    color: #003C78;
+}
+
+.category p {
+    padding: 0 0 12px 10px;
+    color: #B4C5D6;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.content {
+    margin-left: 40px;
+}

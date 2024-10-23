@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../app-components/app-header.css">
+    <link rel="stylesheet" href="../app-components/app-sidebar.css">
+    <link rel="stylesheet" href="../app-components/code-block.css">
+    <link rel="stylesheet" href="../styles/status-and-progress.css">
+    <title>Status and Progress Indicators</title>
+</head>
+<body>
+    <script defer src="../prism/prism.js"></script>
+    <script defer src="../app-components/app-header.js"></script>
+    <script defer src="../app-components/app-sidebar.js"></script>
+    <script defer src="../app-components/code-block.js"></script>
+    <script defer src="../components-code-display/status-and-progress/progress-indicator-code.js"></script>
+    <script defer src="../components-code-display/status-and-progress/spinner-code.js"></script>
+    <script defer src="../components-code-display/status-and-progress/file-card-code.js"></script>
+    <script defer src="../components-code-display/status-and-progress/file-modal-code.js"></script>
+
+    <app-header></app-header>
+    <app-sidebar id="status-and-progress"></app-sidebar>
+
+    <div class="page-content">
+        <div class="container">
+            <a
+                class="css-link"    
+                href="https://github.com/ACRCode/ACR-master-component-library/blob/main/src/styles/status-and-progress.css"
+                target="_blank"
+            >
+                <h1>Status and Progress Indicators</h1>
+                <div class="material-icons open-link-icon">
+                    open_in_new
+                </div>
+            </a>
+
+            <div class="component">
+                <h2>Progress indicator</h2>
+
+                <div class="progress-container">
+                    <p class="progress-title">AutopsyReport1.pdf</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <span id="unique-progress-bar-id-1" style="width: 47%;"></span>
+                        </div>
+                        <button class="material-icons cancel-icon">
+                            cancel
+                        </button>
+                    </div>
+                    <p class="progress-percent">47%</p>
+                </div>
+
+                <progress-indicator-code></progress-indicator-code>
+            </div>
+
+            <div class="component">
+                <h2>Spinner</h2>
+
+                <div class="spinner"></div>
+
+                <spinner-code></spinner-code>
+            </div>
+
+            <div class="component">
+                <h2>File upload card</h2>
+
+                <div class="file-upload-card">
+                    <input type="file" id="unique-id-1" class="file-input">
+                    <div class="material-icons file-upload-icon">
+                        cloud_upload
+                    </div>
+                    Drop files or&nbsp; 
+                    <label for="unique-id-1" class="file-upload-link">
+                        browse
+                    </label>
+                    &nbsp;to upload
+                </div>
+
+                <file-card-code></file-card-code>
+            </div>
+
+            <div class="component">
+                <h2>File upload modal</h2>
+
+                <div class="file-upload-modal">
+                    <button class="material-icons file-modal-close">
+                        close
+                    </button>
+                    <h1 class="file-modal-title">Import file(s)</h1>
+                    <div class="file-upload-card">
+                        <input type="file" id="unique-id-2" class="file-input">
+                        <div class="material-icons file-upload-icon">
+                            cloud_upload
+                        </div>
+                        Drop files or&nbsp; 
+                        <label for="unique-id-2" class="file-upload-link">
+                            browse
+                        </label>
+                        &nbsp;to upload
+                    </div>
+                    <div class="progress-bars-container">
+                        <div class="progress-container">
+                            <p class="progress-title">AutopsyReport2.pdf</p>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar">
+                                    <span id="unique-progress-bar-id-2" style="width: 36%;"></span>
+                                </div>
+                                <button class="material-icons cancel-icon">
+                                    cancel
+                                </button>
+                            </div>
+                            <p class="progress-percent">36%</p>
+                        </div>
+                        <div class="progress-container">
+                            <p class="progress-title">AutopsyReport3.pdf</p>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar">
+                                    <span id="unique-progress-bar-id-3" style="width: 72%;"></span>
+                                </div>
+                                <button class="material-icons cancel-icon">
+                                    cancel
+                                </button>
+                            </div>
+                            <p class="progress-percent">72%</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="modal-button secondary">Action</button>
+                        <button class="modal-button primary">Upload</button>
+                    </div>
+                </div>
+
+                <file-modal-code></file-modal-code>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

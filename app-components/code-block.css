@@ -1,0 +1,27 @@
+.code-section .code-language-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+    margin-left: 1em;
+}
+
+.code-section .code-language-tabs button {
+    background-color: #fff;
+    border: 1.5px solid #00366A;
+    border-radius: 8px;
+    padding: 4px 8px;
+    width: 70px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #00366A;
+    transition: 0.1s;
+}
+
+.code-section .code-language-tabs button:hover,
+.code-section .code-language-tabs button.active {
+    cursor: pointer;
+    color: #fff;
+    background-color: #00366A;
+    border-color: #00366A;
+}

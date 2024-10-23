@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../app-components/app-header.css">
+    <link rel="stylesheet" href="../app-components/app-sidebar.css">
+    <link rel="stylesheet" href="../app-components/code-block.css">
+    <link rel="stylesheet" href="../styles/info-cards.css">
+    <title>Information Cards</title>
+</head>
+<script defer src="../prism/prism.js"></script>
+<script defer src="../app-components/app-header.js"></script>
+<script defer src="../app-components/app-sidebar.js"></script>
+<script defer src="../app-components/code-block.js"></script>
+<script defer src="../components-code-display/info-cards/tall-card-code.js"></script>
+<script defer src="../components-code-display/info-cards/wide-card-code.js"></script>
+<script defer src="../components-code-display/info-cards/small-card-code.js"></script>
+<script defer src="../components-code-display/info-cards/system-alert-code.js"></script>
+    
+<app-header></app-header>
+<app-sidebar id="info-cards"></app-sidebar>
+
+<div class="page-content">
+    <div class="container">
+        <a
+            class="css-link"    
+            href="https://github.com/ACRCode/ACR-master-component-library/blob/main/src/styles/info-cards.css"
+            target="_blank"
+        >
+            <h1>Information Cards</h1>
+            <div class="material-icons open-link-icon">
+                open_in_new
+            </div>
+        </a>
+
+        <div class="component">
+            <h2>Tall info card</h2>
+
+            <div class="tall-info-card">
+                <img class="tall-card-graphic" src="../../assets/icons/FPO-graphic.jpg" alt="Info Card Graphic">
+                <div class="tall-card-title">Image Data Submission</div>
+                <div class="tall-card-content">
+                    <div class="content-text">
+                        Do you have images (slides, photos, etc.) of compelling visual cases in clinical medicine?
+                    </div>
+                    <button class="tall-card-button primary">SUBMIT</button>
+                </div>
+            </div>
+
+            <tall-card-code></tall-card-code>
+        </div>
+
+        <div class="component">
+            <h2>Wide info card</h2>
+
+            <div class="wide-info-card">
+                <div class="material-icons wide-card-icon">
+                    upload_file
+                </div>
+                <div class="wide-card-content">
+                    <div class="wide-content-title">Local Drive</div>
+                    <div>Import DICOM files directly from your local file system</div>
+                </div>
+            </div>
+
+            <wide-card-code></wide-card-code>
+        </div>
+
+        <div class="component">
+            <h2>Small info card</h2>
+
+            <div class="small-info-card-section">
+                <div class="small-info-card">
+                    <div class="small-card-header">
+                        <div class="material-icons small-card-icon">
+                            file_upload
+                        </div>
+                        <div class="small-card-title">
+                            All Submissions
+                        </div>
+                    </div>
+                    <div class="small-card-content">
+                        <div class="small-content-text">
+                            23
+                        </div>
+                        <div class="small-hover-action">
+                            Click to view all
+                        </div>
+                    </div>
+                </div>
+                <div class="small-info-card success">
+                    <div class="small-card-header">
+                        <div class="material-icons small-card-icon">
+                            check_circle
+                        </div>
+                        <div class="small-card-title">
+                            Successful Submissions
+                        </div>
+                    </div>
+                    <div class="small-card-content">
+                        <div class="small-content-text">
+                            12
+                        </div>
+                        <div class="small-hover-action">
+                            Click to view all
+                        </div>
+                    </div>
+                </div>
+
+                <div class="small-info-card warning">
+                    <div class="small-card-header">
+                        <div class="material-icons small-card-icon">
+                            update
+                        </div>
+                        <div class="small-card-title">
+                            In Progress Submissions
+                        </div>
+                    </div>
+                    <div class="small-card-content">
+                        <div class="small-content-text">
+                            4
+                        </div>
+                        <div class="small-hover-action">
+                            Click to view all
+                        </div>
+                    </div>
+                </div>
+
+                <div class="small-info-card error">
+                    <div class="small-card-header">
+                        <div class="material-icons small-card-icon">
+                            report_problem
+                        </div>
+                        <div class="small-card-title">
+                            Failed Submissions
+                        </div>
+                    </div>
+                    <div class="small-card-content">
+                        <div class="small-content-text">
+                            2
+                        </div>
+                        <div class="small-hover-action">
+                            Click to view all
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <small-card-code></small-card-code>
+        </div>
+
+        <div class="component">
+            <h2>System alerts</h2>
+
+            <div class="system-alert-section">
+                <div class="alert approved">
+                    <button class="material-icons close-alert-icon">
+                        close
+                    </button>
+                    <div class="alert-title">
+                        <div class="material-icons alert-icon">
+                            check_circle
+                        </div>
+                        <p class="bold title">Approved</p>
+                        <span class="separator">|</span>
+                        <p>September 12, 2022</p>
+                    </div>
+                    <div class="alert-content">
+                        <p class="bold">The verification/consent form request has been approved by:</p>
+                        <p class="bold">Jane Doe JoeDoe@lbm.com</p>
+                        <p class="small-font">Please contact us for questions or comments. <a href="#" class="email">airpcase@acr.org</a> or 703-390-9872</p>
+                    </div>
+                </div>
+
+                <div class="alert pending">
+                    <button class="material-icons close-alert-icon">
+                        close
+                    </button>
+                    <div class="alert-title">
+                        <div class="material-icons alert-icon">
+                            info
+                        </div>
+                        <p class="bold title">Pending</p>
+                        <span class="separator">|</span>
+                        <p>September 12, 2022</p>
+                    </div>
+                </div>
+
+                <div class="alert error">
+                    <button class="material-icons close-alert-icon">
+                        close
+                    </button>
+                    <div class="alert-title">
+                        <div class="material-icons alert-icon">
+                            cancel
+                        </div>
+                        <p class="bold title">Rejected</p>
+                        <span class="separator">|</span>
+                        <p>September 12, 2022</p>
+                    </div>
+                </div>
+
+                <div class="alert warning">
+                    <button class="material-icons close-alert-icon">
+                        close
+                    </button>
+                    <div class="alert-title">
+                        <div class="material-icons alert-icon">
+                            error
+                        </div>
+                        <p class="bold title">Warning</p>
+                        <span class="separator">|</span>
+                        <p>September 12, 2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <system-alert-code></system-alert-code>
+        </div>
+    </div>
+</div>
+</html>

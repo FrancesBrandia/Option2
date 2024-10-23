@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../app-components/app-header.css">
+    <link rel="stylesheet" href="../app-components/app-sidebar.css">
+    <link rel="stylesheet" href="../app-components/code-block.css">
+    <link rel="stylesheet" href="../styles/headers-footers.css">
+    <title>Headers and Footers</title>
+</head>
+<body>
+    <script defer src="../prism/prism.js"></script>
+    <script defer src="../app-components/app-header.js"></script>
+    <script defer src="../app-components/app-sidebar.js"></script>
+    <script defer src="../app-components/code-block.js"></script>
+    <script defer src="../components-code-display/headers-footers/header-code.js"></script>
+    <script defer src="../components-code-display/headers-footers/light-header-code.js"></script>
+    <script defer src="../components-code-display/headers-footers/subheader-code.js"></script>
+    <script defer src="../components-code-display/headers-footers/pagination-code.js"></script>
+    <script defer src="../components-code-display/headers-footers/footer-code.js"></script>
+
+    <app-header></app-header>
+    <app-sidebar id="headers-footers"></app-sidebar>
+
+    <div class="page-content">
+        <div class="container">
+            <a
+                class="css-link"    
+                href="https://github.com/ACRCode/ACR-master-component-library/blob/main/src/styles/headers-footers.css"
+                target="_blank"
+            >
+                <h1>Headers and Footers</h1>
+                <div class="material-icons open-link-icon">
+                    open_in_new
+                </div>
+            </a>
+
+            <div class="component">
+                <h2>Dark header</h2>
+
+                <div class="header">
+                    <div class="header-logo">
+                        <img class="logo" src="../../assets/icons/ACR-logo-light2.png" alt="ACR Logo">
+                        <div class="app-name">
+                            APP NAME
+                        </div>
+                    </div>
+                    <div class="header-content">
+                        <div 
+                            class="header-dropdown"
+                            onclick="toggleHeaderDropdown.call(this)"
+                        >
+                            Name
+                            <div class="material-icons dropdown-icon">
+                                expand_more
+                            </div>
+                            <div class="header-dropdown-content">
+                                <ul>
+                                    <li><a href="#">
+                                        Edit Profile
+                                    </a></li>
+                                    <li><a href="#">
+                                        Change Password
+                                    </a></li>
+                                    <li><a href="#">
+                                        Log Out
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="material-icons header-help">
+                            question_mark
+                        </button>
+                    </div>
+                </div>
+
+                <header-code></header-code>
+            </div>
+
+            <div class="component">
+                <h2>Light header</h2>
+
+                <div class="component-backdrop">
+                    <div class="header light">
+                        <div class="header-logo">
+                            <img class="logo" src="../../assets/icons/ACR-Logo-light-bkg.svg" alt="ACR Logo">
+                            <div class="app-name">
+                                APP NAME
+                            </div>
+                        </div>
+                        <div class="header-content">
+                            <div
+                                class="header-dropdown"
+                                onclick="toggleHeaderDropdown.call(this)"
+                            >
+                                Name
+                                <div class="material-icons dropdown-icon">
+                                    expand_more
+                                </div>
+                                <div class="header-dropdown-content">
+                                    <ul>
+                                        <li><a href="#">
+                                            Edit Profile
+                                        </a></li>
+                                        <li><a href="#">
+                                            Change Password
+                                        </a></li>
+                                        <li><a href="#">
+                                            Log Out
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="material-icons header-help">
+                                question_mark
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <light-header-code></light-header-code>
+            </div>
+
+            <div class="component">
+                <h2>Subheader</h2>
+
+                <div class="subheader">
+                    <div class="subheader-title">
+                    Subheader Title
+                    </div>
+                    <div class="subheader-content">
+                        <div id="unique-dropdown-id" class="dropdown">
+                            <div class="dropdown-label">
+                                Label
+                            </div>
+                            <div
+                                class="dropdown-trigger"
+                                onclick="toggleSelectDropdown.call(this)"
+                            >
+                                <div class="dropdown-selection">-Select-</div>
+                                <div class="material-icons dropdown-arrow">
+                                    expand_more
+                                </div>
+                                <ul class="dropdown-options">
+                                    <li class="dropdown-option" data-value="Selection Item 1">Selection Item 1</li>
+                                    <li class="dropdown-option" data-value="Selection Item 2">Selection Item 2</li>
+                                    <li class="dropdown-option" data-value="Selection Item 3">Selection Item 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="subheader-button primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <subheader-code></subheader-code>
+            </div>
+
+            <div class="component">
+                <h2>Pagination</h2>
+
+                <div class="pagination">
+                    <div class="pages">
+                        <a href="#" class="previous">
+                            Previous
+                            <div class="material-icons prev-page-icon">
+                                chevron_left
+                            </div>
+                        </a>
+                        <div class="numbers">
+                            <a href="#">1</a>
+                            <a href="#" class="active">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                        </div>
+                        <a href="#" class="next">
+                            <div class="material-icons next-page-icon">
+                                chevron_right
+                            </div>
+                            Next
+                        </a>
+                    </div>
+                    <div class="filter">
+                        Show
+                        <div class="row-filter">
+                            <div class="num-rows">
+                                50
+                            </div>
+                            <div class="num-rows-dropdown-icon-container">
+                                <div class="material-icons num-rows-dropdown-icon">
+                                    expand_more
+                                </div>
+                            </div>
+                            <div class="dropdown-num-rows-content">
+                            </div>
+                        </div>
+                        rows per page
+                    </div>
+                </div>
+
+                <pagination-code></pagination-code>
+            </div>
+
+            <div class="component">
+                <h2>Footer</h2>
+
+                <div class="footer">
+                    <div class="acr-info">
+                        <img class="footer-logo" src="../../assets/icons/ACR-Logo-light-bkg.svg" alt="ACR Logo">
+                        <div class="info-text">
+                            <p>© American College of Radiology</p>
+                            <div class="phone-and-location">
+                                <p>1891 Preston White Dr.</p>
+                                <p>Reston, VA 20191</p>
+                                <p>703.648.8900</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="links">
+                        <a href="#">Disclaimer</a>
+                        <span id="link-separator">|</span>
+                        <a href="#">Privacy</a>
+                    </div>
+                </div>
+
+                <footer-code></footer-code>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // this === the selected header dropdown
+        const toggleHeaderDropdown = function() {
+            if (this.classList.contains('expanded')) {
+                this.classList.remove('expanded');
+                this.querySelector('.header-dropdown-content').style.visibility = 'hidden';
+                this.querySelector('.material-icons.dropdown-icon').style.transform = 'rotate(0deg)';
+            } else {
+                this.classList.add('expanded');
+                this.querySelector('.header-dropdown-content').style.visibility = 'visible';
+                this.querySelector('.material-icons.dropdown-icon').style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Select dropdown menu
+        // close select dropdowns when clicking outside of them
+        window.addEventListener('click', (e) => {
+            if (!e.target.matches('.dropdown-trigger, .dropdown-trigger  *')) {
+                const activeDropdown = document.querySelector('.dropdown-trigger.expanded');  
+                if (activeDropdown) {
+                    toggleSelectDropdown.call(activeDropdown);  
+                }         
+            }
+        });
+
+        // this === the clicked dropdown-trigger div
+        const toggleSelectDropdown = function() {
+            // close the currently opened dropdown
+            const activeDropdown = document.querySelector('.dropdown-trigger.expanded');
+            if (activeDropdown && activeDropdown !== this) {
+                toggleSelectDropdown.call(activeDropdown);
+            }
+
+            // apply the proper css styles to the dropdown
+            const dropdownArrow = this.querySelector('.dropdown-arrow');
+            const dropdownSelection = this.querySelector('.dropdown-selection');
+            const dropdownContent = this.querySelector('.dropdown-options');
+            if (this.classList.contains('expanded')) {
+                this.classList.remove('expanded');
+                dropdownArrow.style.transform = 'rotate(0deg)';
+                dropdownContent.style.visibility = 'hidden';
+            } else {
+                this.classList.add('expanded');
+                dropdownArrow.style.transform = 'rotate(180deg)';
+                dropdownContent.style.visibility = 'visible';
+            }
+
+            // update the selected option if an option is chosen
+            const dropdownOptions = this.querySelectorAll('.dropdown-option');
+            dropdownOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    dropdownSelection.innerHTML = option.innerHTML;
+                });
+            });
+        }
+    </script>
+</body>
+</html>

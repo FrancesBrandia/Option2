@@ -1,0 +1,85 @@
+.app-sidebar {
+    /* width: 40px;
+    width: 274px; */
+    height: calc(100vh - 56px);
+    margin-top: 56px;
+    background-color: #C9D7E5;
+    position: fixed;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.app-sidebar-toggle {
+    position: absolute;
+    top: 16px;
+    right: 11px;
+    font-size: 18px !important;
+    color: #60778E;
+    z-index: 1;
+    background: transparent;
+    transition: 0.05s;
+}
+
+.app-sidebar-toggle.open {
+    display: none;
+}
+
+.app-sidebar-toggle.open:hover {
+    color: #00366A;
+    cursor: pointer;
+}
+
+.app-sidebar-toggle.close {
+    display: none;
+    padding: 3px;
+    border-radius: 50%;
+    color: #7C92A7;
+}
+
+.app-sidebar-toggle.close:hover {
+    background-color: #fff;
+    color: #00366A;
+    cursor: pointer;
+}
+
+.app-sidebar-menu {
+    padding: 44px 16px 0 16px;
+    /* visibility: hidden; */
+    position: relative;
+    width: 274px;
+    /* left: -274px; */
+    transition: 0.5s;
+}
+
+.app-sidebar-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    list-style-type: none;
+    margin-bottom: 16px;
+}
+
+.app-sidebar-menu a {
+    color: #60778E;
+    color: #00366A;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    width: 100%;
+    border-radius: 4px;
+    height: 32px;
+    transition: 0.05s;
+}
+
+.app-sidebar-menu .app-sidebar-icon {
+    color: #00366A;
+    transition: 0.05s;
+}
+
+.app-sidebar-menu a:hover,
+.app-sidebar-menu a.active {
+    background-color: #fff;
+}

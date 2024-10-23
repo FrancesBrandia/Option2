@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../app-components/app-header.css">
+    <link rel="stylesheet" href="../app-components/app-sidebar.css">
+    <link rel="stylesheet" href="../app-components/code-block.css">
+    <link rel="stylesheet" href="../styles/modals-dialogues.css">
+    <title>Modals and Dialogues</title>
+</head>
+<body>
+    <script defer src="../prism/prism.js"></script>
+    <script defer src="../app-components/app-header.js"></script>
+    <script defer src="../app-components/app-sidebar.js"></script>
+    <script defer src="../app-components/code-block.js"></script>
+    <script defer src="../components-code-display/modals-dialogues/horizontal-filters-code.js"></script>
+    <script defer src="../components-code-display/modals-dialogues/vertical-filters-code.js"></script>
+    <script defer src="../components-code-display/modals-dialogues/modal-icon-code.js"></script>
+    <script defer src="../components-code-display/modals-dialogues/alternate-icons-code.js"></script>
+    <script defer src="../components-code-display/modals-dialogues/modal-header-code.js"></script>
+
+    <app-header></app-header>
+    <app-sidebar id="modals-dialogues"></app-sidebar>
+
+    <div class="page-content">
+        <div class="container">
+            <a
+                class="css-link"    
+                href="https://github.com/ACRCode/ACR-master-component-library/blob/main/src/styles/modals-dialogues.css"
+                target="_blank"
+            >
+                <h1>Modals and Dialogues</h1>
+                <div class="material-icons open-link-icon">
+                    open_in_new
+                </div>
+            </a>
+
+            <div class="component">
+                <h2>Horizontal search filters</h2>
+
+                <div class="horizontal-search-filters">
+                    <div class="horizontal-filters-container">
+                        <div class="horizontal-filters">
+                            <div id="dropdown-1" class="dropdown">
+                                <div class="dropdown-label">
+                                    Corporate Account
+                                </div>
+                                <div
+                                    class="dropdown-trigger"
+                                    onclick="toggleSelectDropdown.call(this)"
+                                >
+                                    <div class="dropdown-selection">All</div>
+                                    <div class="material-icons dropdown-arrow">
+                                        expand_more
+                                    </div>
+                                    <ul class="dropdown-options">
+                                        <li class="dropdown-option" data-value="Selection Item 1">All</li>
+                                        <li class="dropdown-option" data-value="Selection Item 2">Selection Item 2</li>
+                                        <li class="dropdown-option" data-value="Selection Item 3">Selection Item 3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="dropdown-2" class="dropdown">
+                                <div class="dropdown-label">
+                                    Facility
+                                </div>
+                                <div
+                                    class="dropdown-trigger"
+                                    onclick="toggleSelectDropdown.call(this)"
+                                >
+                                    <div class="dropdown-selection">All</div>
+                                    <div class="material-icons dropdown-arrow">
+                                        expand_more
+                                    </div>
+                                    <ul class="dropdown-options">
+                                        <li class="dropdown-option" data-value="Selection Item 1">All</li>
+                                        <li class="dropdown-option" data-value="Selection Item 2">Selection Item 2</li>
+                                        <li class="dropdown-option" data-value="Selection Item 3">Selection Item 3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="text-input">
+                                <label for="text-1">Station Name</label>
+                                <input type="text" id="text-1" name="text_input">
+                            </div>
+                            <div class="text-input">
+                                <label for="text-2">Manufacturer</label>
+                                <input type="text" id="text-2" name="text_input">
+                            </div>
+                            <div id="dropdown-3" class="dropdown">
+                                <div class="dropdown-label">
+                                    Status
+                                </div>
+                                <div
+                                    class="dropdown-trigger"
+                                    onclick="toggleSelectDropdown.call(this)"
+                                >
+                                    <div class="dropdown-selection">All</div>
+                                    <div class="material-icons dropdown-arrow">
+                                        expand_more
+                                    </div>
+                                    <ul class="dropdown-options">
+                                        <li class="dropdown-option" data-value="Selection Item 1">Selection Item 1</li>
+                                        <li class="dropdown-option" data-value="Selection Item 2">Selection Item 2</li>
+                                        <li class="dropdown-option" data-value="Selection Item 3">Selection Item 3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="text-input">
+                                <label for="text-3">Model</label>
+                                <input type="text" id="text-3" name="text_input">
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="search-filter-button secondary">Reset</button>
+                            <button class="search-filter-button primary">Search</button>
+                        </div>
+                    </div>
+                    <div class="results">
+                        <p>Results: <span class="num-entries">000 entries found</span></p>
+                        <p>Use the filters to refine the list of fluoroscopes displayed in the table below.</p>
+                    </div>
+                </div>
+
+                <horizontal-filters-code></horizontal-filters-code>
+            </div>
+
+            <div class="component">
+                <h2>Vertical search filters</h2>
+
+                <div class="vertical-search-filters">
+                    <button class="material-icons arrow-icon">
+                        arrow_forward
+                    </button>
+                    <div class="title">Filter</div>
+                    <div class="text-input">
+                        <label for="vertical-search">Search</label>
+                        <input type="text" id="vertical-search" name="text_input">
+                    </div>
+                    <div class="vertical-filters">
+                        <div class="datepicker">
+                            <label for="datepicker-1">Date</label>
+                            <input type="date" id="datepicker-1">
+                        </div>
+                        <div id="dropdown-4" class="dropdown">
+                            <div class="dropdown-label">
+                                Label
+                            </div>
+                            <div
+                                class="dropdown-trigger"
+                                onclick="toggleSelectDropdown.call(this)"
+                            >
+                                <div class="dropdown-selection">-Select-</div>
+                                <div class="material-icons dropdown-arrow">
+                                    expand_more
+                                </div>
+                                <ul class="dropdown-options">
+                                    <li class="dropdown-option" data-value="Selection Item 1">Selection Item 1</li>
+                                    <li class="dropdown-option" data-value="Selection Item 2">Selection Item 2</li>
+                                    <li class="dropdown-option" data-value="Selection Item 3">Selection Item 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="dropdown-5" class="dropdown">
+                            <div class="dropdown-label">
+                                Label
+                            </div>
+                            <div
+                                class="dropdown-trigger"
+                                onclick="toggleSelectDropdown.call(this)"
+                            >
+                                <div class="dropdown-selection">-Select-</div>
+                                <div class="material-icons dropdown-arrow">
+                                    expand_more
+                                </div>
+                                <ul class="dropdown-options">
+                                    <li class="dropdown-option" data-value="Selection Item 1">Selection Item 1</li>
+                                    <li class="dropdown-option" data-value="Selection Item 2">Selection Item 2</li>
+                                    <li class="dropdown-option" data-value="Selection Item 3">Selection Item 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="search-filter-button secondary">Reset</button>
+                        <button class="search-filter-button primary">Search</button>
+                    </div>
+                </div>
+
+                <vertical-filters-code></vertical-filters-code>
+            </div>
+
+            <div class="component">
+                <h2>Modal with icon</h2>
+
+                <div class="modal-with-icon">
+                    <button class="material-icons close-modal-icon">
+                        close
+                    </button>
+                    <div class="modal-content">
+                        <div class="material-icons modal-icon success">
+                            check_circle
+                        </div>
+                        <div class="modal-title">
+                            Success
+                        </div>
+                        <div class="modal-message">
+                            You are about to leave the page without saving your changes.
+                            Do you want to leave without saving?
+                        </div>
+                        <div class="modal-action-buttons">
+                            <button class="modal-button secondary">Action</button>
+                            <button class="modal-button primary">Save Changes</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        Please contact us for questions or comments at 
+                        <a class="modal-footer-email" href="#">email address</a> 
+                        or phone number.
+                    </div>
+                </div>
+
+                <modal-icon-code></modal-icon-code>
+            </div>
+
+            <div class="component">
+                <h2>Alternate modal icons</h2>
+
+                <div class="alternate-modal-icons-section">
+                    <div class="material-icons modal-icon warning">
+                        error
+                    </div>
+                    <div class="material-icons modal-icon error">
+                        cancel
+                    </div>
+                </div>
+
+                <alternate-icons-code></alternate-icons-code>
+            </div>
+
+            <div class="component">
+                <h2>Modal with header</h2>
+
+                <div class="modal-with-header">
+                    <button class="material-icons close-modal-icon">
+                        close
+                    </button>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            Header
+                        </div>
+                        <div class="modal-message">
+                            You are about to leave the page without saving your changes.
+                            Do you want to leave without saving?
+                        </div>
+                        <div class="modal-action-buttons">
+                            <button class="modal-button secondary">Action</button>
+                            <button class="modal-button primary">Save Changes</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        Please contact us for questions or comments at 
+                        <a class="modal-footer-email" href="#">email address</a> 
+                        or phone number.
+                    </div>
+                </div>
+
+                <modal-header-code></modal-header-code>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // close dropdowns when clicking outside of them
+        window.addEventListener('click', (e) => {
+            if (!e.target.matches('.dropdown-trigger, .dropdown-trigger  *')) {
+                const activeDropdown = document.querySelector('.dropdown-trigger.expanded');  
+                if (activeDropdown) {
+                    toggleSelectDropdown.call(activeDropdown);
+                }           
+            }
+        });
+
+        // this === the clicked dropdown-trigger div
+        const toggleSelectDropdown = function() {
+            // close the currently opened dropdown
+            const activeDropdown = document.querySelector('.dropdown-trigger.expanded');
+            if (activeDropdown && activeDropdown !== this) {
+                toggleSelectDropdown.call(activeDropdown);
+            }
+
+            // apply the proper css styles to the dropdown
+            const dropdownArrow = this.querySelector('.dropdown-arrow');
+            const dropdownSelection = this.querySelector('.dropdown-selection');
+            const dropdownContent = this.querySelector('.dropdown-options');
+            if (this.classList.contains('expanded')) {
+                this.classList.remove('expanded');
+                dropdownArrow.style.transform = 'rotate(0deg)';
+                dropdownContent.style.visibility = 'hidden';
+            } else {
+                this.classList.add('expanded');
+                dropdownArrow.style.transform = 'rotate(180deg)';
+                dropdownContent.style.visibility = 'visible';
+            }
+
+            // update the selected option if an option is chosen
+            const dropdownOptions = this.querySelectorAll('.dropdown-option');
+            dropdownOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    dropdownSelection.innerHTML = option.innerHTML;
+                });
+            });
+        }
+    </script>
+</body>
+</html>

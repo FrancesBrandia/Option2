@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../app-components/app-header.css">
+    <link rel="stylesheet" href="../app-components/app-sidebar.css">
+    <link rel="stylesheet" href="../app-components/code-block.css">
+    <link rel="stylesheet" href="../styles/navigation.css">
+    <title>Navigation</title>
+</head>
+<body>
+    <script defer src="../prism/prism.js"></script>
+    <script defer src="../app-components/app-header.js"></script>
+    <script defer src="../app-components/app-sidebar.js"></script>
+    <script defer src="../app-components/code-block.js"></script>
+    <script defer src="../components-code-display/navigation/header-tabs-code.js"></script>
+    <script defer src="../components-code-display/navigation/header-material-code.js"></script>
+
+    <app-header></app-header>
+    <app-sidebar id="navigation"></app-sidebar>
+
+    <div class="page-content">
+        <div class="container">
+            <a
+                class="css-link"    
+                href="https://github.com/ACRCode/ACR-master-component-library/blob/main/src/styles/navigation.css"
+                target="_blank"
+            >
+                <h1>Navigation</h1>
+                <div class="material-icons open-link-icon">
+                    open_in_new
+                </div>
+            </a>
+
+            <div class="component">
+                <h2>Header with tabs</h2>
+
+                <div class="header-tabs">
+                    <ul>
+                        <li><a href="#">Menu Item</a></li>
+                        <li><a href="#" class="active">Menu Item</a></li>
+                        <li><a href="#">Menu Item</a></li>
+                    </ul>
+                </div>
+
+                <header-tabs-code></header-tabs-code>
+            </div>
+
+            <div class="component">
+                <h2>Header with material tabs</h2>
+
+                <div class="header-material">
+                    <ul>
+                        <li><a href="#" class="active">
+                            Menu Item
+                            <div class="material-underline"></div>
+                        </a></li>
+                        <li><a href="#">
+                            Menu Item
+                            <div class="material-underline"></div>
+                        </a></li>
+                        <li><a href="#">
+                            Menu Item
+                            <div class="material-underline"></div>
+                        </a></li>
+                    </ul>
+                </div>
+
+                <header-material-code></header-material-code>
+            </div>
+        </div>
+    </div>
+           
+    <script>
+        // Header with tabs
+        activeTab = document.querySelector('.header-tabs a.active');
+
+        const tabs = document.querySelectorAll('.header-tabs a');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                activeTab.classList.remove('active');
+                tab.classList.add('active');
+                activeTab = tab;
+            });
+        });
+
+        // Header with material tabs
+        activeMatTab = document.querySelector('.header-material a.active');
+
+        const matTabs = document.querySelectorAll('.header-material a');
+        matTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                activeMatTab.classList.remove('active');
+                tab.classList.add('active');
+                activeMatTab = tab;
+            });
+        });
+    </script>
+</body>
+</html>
